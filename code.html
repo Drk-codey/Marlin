@@ -1,0 +1,952 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MARLIN Booking | Modern Editorial Stays</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#fbf8ff",
+              "secondary-container": "#dadefd",
+              "primary-fixed-dim": "#ffb4aa",
+              "on-tertiary-fixed": "#261a00",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#41455f",
+              "surface-container-low": "#FFF5F5",
+              "tertiary-container": "#946f00",
+              "secondary-fixed": "#dde1ff",
+              "inverse-primary": "#ffb4aa",
+              "tertiary-fixed-dim": "#fabd00",
+              "surface-dim": "#d4d8f7",
+              "surface-variant": "#dde1ff",
+              "on-secondary-container": "#5c617c",
+              "outline": "#EEEEEE",
+              "background": "#ffffff",
+              "on-primary-fixed": "#410001",
+              "error-container": "#ffdad6",
+              "surface-container": "#F5F5F5",
+              "surface": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "on-background": "#1A1F36",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#5b4300",
+              "primary-fixed": "#ffdad5",
+              "outline-variant": "#EEEEEE",
+              "on-primary-fixed-variant": "#930005",
+              "on-secondary-fixed": "#1A1F36",
+              "on-surface": "#1A1F36",
+              "tertiary": "#755700",
+              "secondary-fixed-dim": "#c1c5e3",
+              "on-primary-container": "#fffbff",
+              "primary-container": "#df2b23",
+              "surface-container-high": "#e4e7ff",
+              "surface-container-highest": "#dde1ff",
+              "surface-tint": "#E63027",
+              "on-error": "#ffffff",
+              "primary": "#E63027",
+              "on-surface-variant": "#555555",
+              "inverse-surface": "#2a2f47",
+              "tertiary-fixed": "#ffdf9e",
+              "secondary": "#585d77",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f0efff",
+              "error": "#ba1a1a",
+              "star-gold": "#FFC107"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; color: #1A1F36; }
+        h1, h2, h3, .logo-text { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .clip-hero { clip-path: polygon(0 0, 92% 0, 78% 100%, 0 100%); }
+        .marquee { display: flex; overflow: hidden; user-select: none; gap: 2rem; }
+        .marquee-content { flex-shrink: 0; display: flex; justify-content: space-around; min-width: 100%; gap: 2rem; animation: scroll 20s linear infinite; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-white">
+<!-- SECTION 1: Navigation Bar -->
+<header class="sticky top-0 w-full h-[64px] z-50 bg-white border-b border-[#EEEEEE] flex items-center">
+<div class="max-w-[1280px] w-full mx-auto px-10 flex justify-between items-center">
+<!-- Left: Contact -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#E63027] text-[18px]" style="">call</span>
+<span class="text-[13px] font-medium text-[#1A1F36]" style=""><br></span>
+</div>
+<!-- Center: Logo & Nav -->
+<div class="flex items-center gap-12">
+<div class="flex flex-col items-start leading-none">
+<div class="flex items-baseline gap-0.5">
+<span class="text-xl font-extrabold uppercase tracking-tighter text-[#1A1F36]" style="">MARLIN</span>
+<div class="w-1.5 h-1.5 bg-[#E63027] rounded-full"></div>
+</div>
+<span class="text-[11px] font-medium tracking-widest text-[#555555] ml-0.5" style="">Booking.</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[14px] font-semibold text-[#E63027] border-b-2 border-[#E63027] pb-1" href="#" style="">Home</a>
+<a class="text-[14px] font-medium text-[#555555] hover:text-[#1A1F36] transition-colors" href="#" style="">Solutions</a>
+<a class="text-[14px] font-medium text-[#555555] hover:text-[#1A1F36] transition-colors" href="#" style="">About Us</a>
+<a class="text-[14px] font-medium text-[#555555] hover:text-[#1A1F36] transition-colors" href="#" style="">Services</a>
+<a class="text-[14px] font-medium text-[#555555] hover:text-[#1A1F36] transition-colors" href="#" style="">Booking</a>
+<a class="text-[14px] font-medium text-[#555555] hover:text-[#1A1F36] transition-colors" href="#" style="">How it Works</a>
+<a class="text-[14px] font-medium text-[#555555] hover:text-[#1A1F36] transition-colors" href="#" style="">Locations</a>
+</nav>
+</div>
+<!-- Right: Actions -->
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-1 text-[#555555] text-[14px] cursor-pointer">
+<span class="material-symbols-outlined text-[18px]" style="">language</span>
+<span class="" style="">English</span>
+<span class="material-symbols-outlined text-[16px]" style="">expand_more</span>
+</div>
+<div class="w-[1px] h-6 bg-[#EEEEEE]"></div>
+<button class="px-5 py-2 border-[1.5px] border-[#1A1F36] text-[#1A1F36] text-[14px] font-semibold rounded-[8px] hover:bg-[#1A1F36] hover:text-white transition-all" style="">Sign In</button>
+<button class="px-6 py-2.5 bg-[#E63027] text-white text-[14px] font-semibold rounded-full flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all" style="">
+                    Contact Us <span class="material-symbols-outlined text-[18px]" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SECTION 2: Hero Section -->
+<section class="relative h-[520px] w-full overflow-visible">
+<div class="flex h-full w-full">
+<!-- Left Panel -->
+<div class="w-[58%] bg-[#E63027] clip-hero z-10 relative flex items-center">
+<div class="pl-20 max-w-[560px]">
+<span class="inline-block px-3.5 py-1 bg-white/20 text-white text-[12px] font-semibold rounded-full mb-4" style="">Find Your Stay</span>
+<h1 class="text-[46px] leading-[1.15] font-extrabold text-white mb-4" style="">Find Your Perfect Stay Fast and Easy.</h1>
+<p class="text-[14px] text-white/85 leading-[1.7] max-w-[360px] mb-7" style="">Discover incredible stays and destinations with MARLIN Booking. We handle the complexity, you enjoy the journey.</p>
+<button class="px-8 py-3.5 bg-white text-[#E63027] text-[15px] font-bold rounded-full flex items-center gap-2 hover:scale-105 transition-transform" style="">
+                        Start Your Booking <span class="material-symbols-outlined text-[20px]" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Panel -->
+<div class="w-[42%] relative -ml-[14%]">
+<img class="w-full h-full object-cover" data-alt="luxury resort exterior with glowing infinity pool at dusk under a deep blue twilight sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCF3g1nalSnnBPZavTqDHUD1koj2IboqnwKTCwHESh1K4mVdgA8m1pBoJEMv10bnoWMHPDa4ziJaved5uGP-VlmpTFJQHefYkALnF-I2fcUBqRd5GLLI9hRwHvCnzCjZR498LoN2WQHBqVCAgz13Rs8KP2pLikQbCkTtlYKkr1Me0FljPHJHrMAqTZ9fM63K14LFCRrQrxFnfGcJGX5L4Pdq_OR2WLMCbsbOQTpF9Ymph3ZK1KrtBgLwxmO3gd-n_2LazJCjmtk9M" style="">
+</div>
+</div>
+<!-- Floating Search Card -->
+<div class="absolute -bottom-[60px] left-0 right-0 z-20">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="bg-white rounded-[16px] shadow-[0_8px_40px_rgba(26,31,54,0.12)] p-6">
+<!-- Tab Filters -->
+<div class="flex gap-2 mb-4">
+<button class="flex items-center gap-2 px-5 py-2 bg-[#E63027] text-white rounded-full text-[14px] font-medium" style="">
+<span class="material-symbols-outlined text-[18px]" style="">nights_stay</span> Nights
+                        </button>
+<button class="flex items-center gap-2 px-5 py-2 bg-[#F5F5F5] text-[#555555] rounded-full text-[14px] font-medium hover:bg-gray-200 transition-colors" style="">
+<span class="material-symbols-outlined text-[18px]" style="">hotel</span> Hotel
+                        </button>
+<button class="flex items-center gap-2 px-5 py-2 bg-[#F5F5F5] text-[#555555] rounded-full text-[14px] font-medium hover:bg-gray-200 transition-colors" style="">
+<span class="material-symbols-outlined text-[18px]" style="">directions_boat</span> Cruise
+                        </button>
+<button class="flex items-center gap-2 px-5 py-2 bg-[#F5F5F5] text-[#555555] rounded-full text-[14px] font-medium hover:bg-gray-200 transition-colors" style="">
+<span class="material-symbols-outlined text-[18px]" style="">flight</span> Trips
+                        </button>
+</div>
+<!-- Bottom Row: Inputs -->
+<div class="flex items-center border border-[#EEEEEE] rounded-[50px] overflow-hidden">
+<div class="flex-1 px-6 py-2 border-r border-[#EEEEEE]">
+<label class="block text-[11px] font-bold text-[#888888] uppercase tracking-wider mb-0.5" style="">City/Destination</label>
+<span class="text-[14px] font-semibold text-[#1A1F36] flex items-center gap-1" style=""><span class="material-symbols-outlined text-[16px]" style="">location_on</span> New York</span>
+</div>
+<div class="flex-1 px-6 py-2 border-r border-[#EEEEEE]">
+<label class="block text-[11px] font-bold text-[#888888] uppercase tracking-wider mb-0.5" style="">Check In</label>
+<span class="text-[14px] font-semibold text-[#1A1F36] flex items-center gap-1" style=""><span class="material-symbols-outlined text-[16px]" style="">calendar_today</span> 21-10-2025</span>
+</div>
+<div class="flex-1 px-6 py-2 border-r border-[#EEEEEE]">
+<label class="block text-[11px] font-bold text-[#888888] uppercase tracking-wider mb-0.5" style="">Check Out</label>
+<span class="text-[14px] font-semibold text-[#1A1F36] flex items-center gap-1" style=""><span class="material-symbols-outlined text-[16px]" style="">calendar_month</span> 21-10-2025</span>
+</div>
+<div class="flex-1 px-6 py-2 border-r border-[#EEEEEE]">
+<label class="block text-[11px] font-bold text-[#888888] uppercase tracking-wider mb-0.5" style="">Guests</label>
+<span class="text-[14px] font-semibold text-[#1A1F36] flex items-center gap-1" style=""><span class="material-symbols-outlined text-[16px]" style="">group</span> 4 Persons</span>
+</div>
+<div class="flex-1 px-6 py-2">
+<label class="block text-[11px] font-bold text-[#888888] uppercase tracking-wider mb-0.5" style="">Price Night</label>
+<span class="text-[14px] font-semibold text-[#1A1F36] flex items-center gap-1" style=""><span class="material-symbols-outlined text-[16px]" style="">payments</span> $1000 - $5000</span>
+</div>
+<button class="bg-[#E63027] text-white px-10 py-[22px] flex items-center gap-2 font-bold text-[15px] hover:opacity-90 active:scale-95 transition-all" style="">
+<span class="material-symbols-outlined text-[20px]" style="">search</span> Search
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Travellers & Preferences -->
+<section class="mt-[160px] py-[60px] bg-white">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="flex justify-between items-end mb-8">
+<div>
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">Traveler Picks</span>
+<h2 class="text-[24px] font-extrabold text-[#1A1F36] mt-1" style="">Travellers &amp; Preferences.</h2>
+</div>
+<button class="px-6 py-2 border-[1.5px] border-[#E63027] text-[#E63027] rounded-full text-[13px] font-bold hover:bg-[#E63027] hover:text-white transition-all flex items-center gap-2" style="">
+                    View All <span class="material-symbols-outlined text-[16px]" style="">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-5 relative group">
+<!-- Card 1 (Active) -->
+<div class="flex-1 min-w-[200px] bg-white rounded-[12px] overflow-hidden border border-[#EEEEEE] border-t-[3px] border-t-[#E63027]">
+<img class="h-[130px] w-full object-cover" data-alt="modern deluxe hotel suite with king size bed and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVU-o5FelNBrKprwqF16BrxE3kMMjmU1g_4viBYjFAW7DINnWWaXzjT-WdcC2_1ZR4XXqwAklqT4dqUIG86rszx4NdXKi7TmUWLm0DHAf3z_eMn0jMAHt7O4vew3bbr6hAtwZYDjM6h6mBXBBF3HbNCaKLLi22QNcTWMdZcBmAApMPsg0yAW0KAjjOgsLozKzFVxw1iIgx1rYlxaLHgAA5Tgttx2W0rftuMrvqetz-cch_zQrcnDIhaVfULznSqIxV2KcWLcop6bg" style="">
+<div class="p-4">
+<span class="material-symbols-outlined text-[#E63027] text-[20px]" style="">bed</span>
+<h3 class="text-[14px] font-bold text-[#1A1F36] mt-1.5" style="">Deluxe Suite</h3>
+<p class="text-[12px] text-[#888888] mt-1" style="">226 Hotels Available</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex-1 min-w-[200px] bg-white rounded-[12px] overflow-hidden border border-[#EEEEEE]">
+<img class="h-[130px] w-full object-cover" data-alt="clean and minimalist standard hotel room with natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3TGNE50tJBB407q2Y30MQqcExR8AKduS_SanoWdHizEuzgQIt2QNYR_qCkM5mf0_7VI7xaIluoaMNKPPopEAMydGt63E2eF1xe9W3K2_2bPEmWvToqCDC7UhVnZV4YuYo_o6S3uGVu6mJ1B7GpdSpV0lX5_unsDUMguqLm8-RJEvtMfUL_pQ06TYb8odHYJrVzyussFw_iYfBkj0u7w5_H5fArljGRRu7JFnl3EplNVy-QbHG9pY-nDtF2wxwj8gAorzbNmNlCfI" style="">
+<div class="p-4">
+<span class="material-symbols-outlined text-[#E63027] text-[20px]" style="">door_front</span>
+<h3 class="text-[14px] font-bold text-[#1A1F36] mt-1.5" style="">Standard Room</h3>
+<p class="text-[12px] text-[#888888] mt-1" style="">412 Hotels Available</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-1 min-w-[200px] bg-white rounded-[12px] overflow-hidden border border-[#EEEEEE]">
+<img class="h-[130px] w-full object-cover" data-alt="spacious luxury suite with sitting area and balcony view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGeAgvqDep6EPu-dm1H_dBnMMctb2v9mlRfe0-NMrY0zf7gkM0oA0W6I9RlyN0EqBLjQHhgUEdcUVfQuQ-2v0KUZIpPlnbyBGNuGLqb1lVcbp1Uy6aFlfJrv87ZQoGVAc9OxvXjzDvvH32G3_RDz9GM8d5H2Al1jrsKgsunYTh-B_Q7R2bJd5NJAh2rh1N2vG24l4RH7ZAt7okzHeV1RDhaQyA1dMls2MHwB6kA2JNOCmkp0Venk8HdCBwspwgsBz-KXn-XZZJGyk" style="">
+<div class="p-4">
+<span class="material-symbols-outlined text-[#E63027] text-[20px]" style="">king_bed</span>
+<h3 class="text-[14px] font-bold text-[#1A1F36] mt-1.5" style="">Suite Room</h3>
+<p class="text-[12px] text-[#888888] mt-1" style="">158 Hotels Available</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex-1 min-w-[200px] bg-white rounded-[12px] overflow-hidden border border-[#EEEEEE]">
+<img class="h-[130px] w-full object-cover" data-alt="elegant executive suite with desk and high-end furnishings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxb6xu-hgjcVYtF243cCwLkG3g7o_pq3_ekCDmMkClDBPPopa2ReerQAPVxLFI25o05jR-qK1dDKLjjr8zvFIDONy4WuLhErIlGv4l1xkGf-uh6yy6h3no1aVUC2jhqRlswMFNS0OWBc5TtCt6pa0jtUscEe_Q-A-vgLt6OQ2wo7p85y7Hg7MTeD58F2cUYfQkPjJQMlvS6VQxSTpRh0vYL6jAM12XHtewjUHRfjTIFMR8tFwk5DYx2nJpxMx_XHs0p21_Bl5fi68" style="">
+<div class="p-4">
+<span class="material-symbols-outlined text-[#E63027] text-[20px]" style="">workspace_premium</span>
+<h3 class="text-[14px] font-bold text-[#1A1F36] mt-1.5" style="">Executive Suite</h3>
+<p class="text-[12px] text-[#888888] mt-1" style="">94 Hotels Available</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex-1 min-w-[200px] bg-white rounded-[12px] overflow-hidden border border-[#EEEEEE]">
+<img class="h-[130px] w-full object-cover" data-alt="large family hotel room with multiple beds and colorful accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS7aP4hnXDAnus7mwTldDRwrK8H2lkSLaXpBu_5jrEWKfC8x2GgpKmYUnDPEtioL97e-1GjNlGvn5cCVsThpkJDKhAfvgLY4KUgUXbS-EtvRH9PwLw8m1X5Q_c0VTuX7HnfyDJ1xGOqVU7r59dwi8pRyLStZdnYGOBCGEMurnzvpkIi9ScSYYMet_jBvogzMkkblgNDrFBX-UPv0bKoW1OQs3jKBVzucNMYQgZ-xjEhfQ_YmvjxEEehzS63PfxPa03Zzq0utAEstA" style="">
+<div class="p-4">
+<span class="material-symbols-outlined text-[#E63027] text-[20px]" style="">family_restroom</span>
+<h3 class="text-[14px] font-bold text-[#1A1F36] mt-1.5" style="">Family Rooms</h3>
+<p class="text-[12px] text-[#888888] mt-1" style="">310 Hotels Available</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-4 mt-8">
+<button class="w-9 h-9 rounded-full bg-white border border-[#EEEEEE] shadow-sm flex items-center justify-center text-[#555555] hover:bg-gray-50" style="">
+<span class="material-symbols-outlined text-[20px]" style="">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-white border border-[#EEEEEE] shadow-sm flex items-center justify-center text-[#555555] hover:bg-gray-50" style="">
+<span class="material-symbols-outlined text-[20px]" style="">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Features Ticker Banner -->
+<div class="w-full bg-[#E63027] h-[48px] flex items-center overflow-hidden">
+<div class="marquee">
+<div class="marquee-content text-white text-[13px] font-medium tracking-[0.05em] uppercase">
+<span class="" style="">✦ Outstanding Support</span> <span class="" style="">•</span>
+<span class="" style="">✦ Academic Standards</span> <span class="" style="">•</span>
+<span class="" style="">✦ Personalised Itineraries</span> <span class="" style="">•</span>
+<span class="" style="">✦ Comprehensive Planning</span> <span class="" style="">•</span>
+<span class="" style="">✦ Expert Guidance</span> <span class="" style="">•</span>
+<span class="" style="">✦ Local Experience</span> <span class="" style="">•</span>
+<span class="" style="">✦ Outstanding Support</span> <span class="" style="">•</span>
+<span class="" style="">✦ Academic Standards</span> <span class="" style="">•</span>
+<span class="" style="">✦ Personalised Itineraries</span> <span class="" style="">•</span>
+<span class="" style="">✦ Comprehensive Planning</span> <span class="" style="">•</span>
+<span class="" style="">✦ Expert Guidance</span> <span class="" style="">•</span>
+<span class="" style="">✦ Local Experience</span>
+</div>
+</div>
+</div>
+<!-- SECTION 5: Top Picks for Modern Travellers -->
+<section class="bg-[#F5F5F5] py-[80px]">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="flex justify-between items-end mb-10">
+<div>
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">Top Rated</span>
+<h2 class="text-[28px] font-extrabold text-[#1A1F36] mt-1" style="">Top Picks for Modern Travellers.</h2>
+</div>
+<button class="px-6 py-2 border-[1.5px] border-[#E63027] text-[#E63027] rounded-full text-[13px] font-bold hover:bg-[#E63027] hover:text-white transition-all" style="">View All →</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Hotel Card 1 -->
+<div class="bg-white rounded-[12px] shadow-[0_4px_20px_rgba(26,31,54,0.07)] overflow-hidden">
+<img class="h-[180px] w-full object-cover" data-alt="stunning hotel pool deck with white lounge chairs and turquoise water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv3z-m_jDoWgtbo-zX55TmzxYi-DSKya9ux1vQ99GABcmqeVePbt8WkPeP1sVwpYji3pBa8JfsN7Q5TeD8csveb52-tVY0PWEebC2uy1kdMKscBOkUF8vH6rAWMRkHEYaBAYijjZrtJtcusoH0YW0P4lIUxfHoGjmZqmmjxRzHlEkdfm84bjIt8SQZCYa_55Vl_bfgnIOwwzliLeWKnOXsFwGNL62ZXTKQXXF08tRuDPWuxU1t-XaM6IaQ2hSva2veirKxzHqUFys" style="">
+<div class="p-4">
+<div class="flex justify-between items-start">
+<h3 class="text-[15px] font-bold text-[#1A1F36]" style="">Hotel Mariners</h3>
+<span class="text-[15px] font-bold text-[#E63027]" style="">$300/Night</span>
+</div>
+<p class="text-[12px] text-[#888888] mt-1 flex items-center gap-1" style=""><span class="material-symbols-outlined text-[14px]" style="">location_on</span> South Folkshire, UK</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex text-[#FFC107] text-[14px]">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="">star_half</span>
+</div>
+<span class="text-[13px] font-bold text-[#1A1F36]" style="">4.2</span>
+<span class="text-[12px] text-[#888888]" style="">(240 Reviews)</span>
+</div>
+<div class="flex items-center gap-2 mt-3 text-[#888888]">
+<span class="text-[11px] font-semibold uppercase tracking-tighter" style="">Facilities:</span>
+<span class="material-symbols-outlined text-[16px]" style="">wifi</span>
+<span class="material-symbols-outlined text-[16px]" style="">local_parking</span>
+<span class="material-symbols-outlined text-[16px]" style="">pool</span>
+<span class="material-symbols-outlined text-[16px]" style="">restaurant</span>
+</div>
+<button class="w-full mt-4 bg-[#E63027] text-white py-2.5 rounded-[8px] text-[13px] font-bold hover:opacity-90" style="">Book Now</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-[12px] shadow-[0_4px_20px_rgba(26,31,54,0.07)] overflow-hidden">
+<img class="h-[180px] w-full object-cover" data-alt="chic urban boutique hotel lobby with high-end furniture and art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT2V2Ik_UVKlrcgK7DcyuEIInWGc6QjO6WGWfoDzi35fY2kbFLp8Yp_IbluZ1fclaFQ1QWWpNTGoZ3_R9XWQPONKO63i6Cw371RkKuJZ6rlUA3PGQ3qmrjzosQzr9WnkTuIesjJOh1CLT_tncKZaeYqN1VAjtSVVbBkG3X7sws86Nc72jpcHjzaw-GkiW5_EStaKDCQiVVOkv8XCq6IW7pN52xtUq46rVJLG2dtaA2IloGoRFzSk60lpkzJ-ZLormju6vc42dWQ1I" style="">
+<div class="p-4">
+<div class="flex justify-between items-start">
+<h3 class="text-[15px] font-bold text-[#1A1F36]" style="">Urban Boutique</h3>
+<span class="text-[15px] font-bold text-[#E63027]" style="">$450/Night</span>
+</div>
+<p class="text-[12px] text-[#888888] mt-1 flex items-center gap-1" style=""><span class="material-symbols-outlined text-[14px]" style="">location_on</span> New York, USA</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex text-[#FFC107] text-[14px]">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<span class="text-[13px] font-bold text-[#1A1F36]" style="">4.9</span>
+<span class="text-[12px] text-[#888888]" style="">(512 Reviews)</span>
+</div>
+<div class="flex items-center gap-2 mt-3 text-[#888888]">
+<span class="text-[11px] font-semibold uppercase tracking-tighter" style="">Facilities:</span>
+<span class="material-symbols-outlined text-[16px]" style="">wifi</span>
+<span class="material-symbols-outlined text-[16px]" style="">fitness_center</span>
+<span class="material-symbols-outlined text-[16px]" style="">spa</span>
+<span class="material-symbols-outlined text-[16px]" style="">restaurant</span>
+</div>
+<button class="w-full mt-4 bg-[#E63027] text-white py-2.5 rounded-[8px] text-[13px] font-bold hover:opacity-90" style="">Book Now</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-[12px] shadow-[0_4px_20px_rgba(26,31,54,0.07)] overflow-hidden">
+<img class="h-[180px] w-full object-cover" data-alt="rustic wooden alpine lodge nestled in snow-covered mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ-0ooSzBzik_4z00VoomRxlzVUysSVK5T0adFq64GhwS-9EY64bE1g1KsORIJ7-IJSK1-MfOkEJ-OjG-CshFvq5ylvvaDcOE9qSWQayPtv3EcuM8c77bnILABWDrLyIPDKvdXR_DWr7o6Izwfy4YoHlJlWklDRLjpzE_FUxnEZYpIyB9ZI1K0wkoH3Uw6QNQjGBG9xA4S3wROqHIP1wimOtYvJGuyvbZ3LkNHDayxqTZyhVJNSpG4PtjH5y8wDbFZyD78F-zSoLw" style="">
+<div class="p-4">
+<div class="flex justify-between items-start">
+<h3 class="text-[15px] font-bold text-[#1A1F36]" style="">Alpine Edge Lodge</h3>
+<span class="text-[15px] font-bold text-[#E63027]" style="">$520/Night</span>
+</div>
+<p class="text-[12px] text-[#888888] mt-1 flex items-center gap-1" style=""><span class="material-symbols-outlined text-[14px]" style="">location_on</span> Zermatt, Switzerland</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex text-[#FFC107] text-[14px]">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="">star</span>
+</div>
+<span class="text-[13px] font-bold text-[#1A1F36]" style="">4.7</span>
+<span class="text-[12px] text-[#888888]" style="">(189 Reviews)</span>
+</div>
+<div class="flex items-center gap-2 mt-3 text-[#888888]">
+<span class="text-[11px] font-semibold uppercase tracking-tighter" style="">Facilities:</span>
+<span class="material-symbols-outlined text-[16px]" style="">fireplace</span>
+<span class="material-symbols-outlined text-[16px]" style="">hot_tub</span>
+<span class="material-symbols-outlined text-[16px]" style="">downhill_skiing</span>
+<span class="material-symbols-outlined text-[16px]" style="">restaurant</span>
+</div>
+<button class="w-full mt-4 bg-[#E63027] text-white py-2.5 rounded-[8px] text-[13px] font-bold hover:opacity-90" style="">Book Now</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-[12px] shadow-[0_4px_20px_rgba(26,31,54,0.07)] overflow-hidden">
+<img class="h-[180px] w-full object-cover" data-alt="serene beach cabins with straw roofs on white sand next to calm ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLEywoud5aoS-6w-hvUwdTG0nhWDzy5ShRShrIVaG60JSY_y3nvWIzaskNFM55N3hrxHvUksP4aPI5yrL6OrFrQ0REd5CEZnjA1ReQisloGZvD5OAXkdpRmUNDGnZ0TFX_SrQR0cbZQsHCUGt0FkAgTjjocyFOX0Tqv4pcmHKq3BM6kUuCO-JOBzGE1VCnyiRCdLmtqleK9_9xFNHDAq3hMW-v6UcM8P1C-7EIxtwSAjbRhy0SQBSuDeZaN8N243zy2pQXyeC44Fk" style="">
+<div class="p-4">
+<div class="flex justify-between items-start">
+<h3 class="text-[15px] font-bold text-[#1A1F36]" style="">Serene Cabins</h3>
+<span class="text-[15px] font-bold text-[#E63027]" style="">$280/Night</span>
+</div>
+<p class="text-[12px] text-[#888888] mt-1 flex items-center gap-1" style=""><span class="material-symbols-outlined text-[14px]" style="">location_on</span> Bali, Indonesia</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex text-[#FFC107] text-[14px]">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="">star_outline</span>
+</div>
+<span class="text-[13px] font-bold text-[#1A1F36]" style="">4.0</span>
+<span class="text-[12px] text-[#888888]" style="">(98 Reviews)</span>
+</div>
+<div class="flex items-center gap-2 mt-3 text-[#888888]">
+<span class="text-[11px] font-semibold uppercase tracking-tighter" style="">Facilities:</span>
+<span class="material-symbols-outlined text-[16px]" style="">beach_access</span>
+<span class="material-symbols-outlined text-[16px]" style="">ac_unit</span>
+<span class="material-symbols-outlined text-[16px]" style="">pool</span>
+<span class="material-symbols-outlined text-[16px]" style="">wifi</span>
+</div>
+<button class="w-full mt-4 bg-[#E63027] text-white py-2.5 rounded-[8px] text-[13px] font-bold hover:opacity-90" style="">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Summer Stays Video Banner -->
+<section class="relative w-full h-[380px] flex items-center justify-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="expansive luxury resort swimming pool with tropical palm trees and sunset glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsQRJxFNH-igv9GfcnXpiz4bUaZWgisKly36Kn-ww-Y_aQdIVvMZyI12Rxz_D8U2HhRIpg6_tO8QWw_RM0078oMSwdnAMv-Ons19Ppj8zFW50megSPVvoTUVlDyjaVbO2S2LngCtU6NzcAD1mvXDfdDNUa6Ha5hWEclJ3KF6dG3ukaidThAezsRHOkrRiPdnmbzWfT7PUFPaTihsrBpV_Ccuvn7fIQFeaupL2Np4SxGFupf-5lXFJC4oZT9QEUX6I6aTr8otV4OAA" style="">
+<div class="absolute inset-0 bg-black/55"></div>
+<button class="absolute left-10 w-11 h-11 bg-white rounded-full flex items-center justify-center text-[#1A1F36] hover:scale-110 transition-transform" style="">
+<span class="material-symbols-outlined" style="">chevron_left</span>
+</button>
+<button class="absolute right-10 w-11 h-11 bg-white rounded-full flex items-center justify-center text-[#1A1F36] hover:scale-110 transition-transform" style="">
+<span class="material-symbols-outlined" style="">chevron_right</span>
+</button>
+<div class="relative z-10 flex items-center gap-16 max-w-[900px]">
+<div class="text-center md:text-left">
+<span class="inline-block px-4.5 py-1.5 bg-[#E63027] text-white text-[12px] font-bold rounded-full mb-3 uppercase tracking-wide" style="">Special Offers</span>
+<h2 class="text-white text-[38px] font-extrabold leading-tight" style="">Summer Stays. <br>Extra Savings.</h2>
+<p class="text-white/80 text-[14px] leading-[1.7] max-w-[480px] mt-3" style="">Book a minimum 3-night stay this summer and enjoy 25% off your accommodation — the boldest deal for every day of your stay.</p>
+<button class="mt-6 px-7 py-3 bg-[#E63027] text-white text-[15px] font-bold rounded-full hover:opacity-90 transition-opacity" style="">Special Offers</button>
+</div>
+<div class="hidden md:flex flex-col items-center">
+<button class="w-[72px] h-[72px] bg-white rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.3)] flex items-center justify-center text-[#E63027] hover:scale-110 transition-transform" style="">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 7: Popular Accommodations -->
+<section class="py-[80px] bg-white">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="mb-10">
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">Top Picks</span>
+<h2 class="text-[28px] font-extrabold text-[#1A1F36] mt-1" style="">Popular Accommodations.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Horizontal Card 1 -->
+<div class="flex items-center gap-4 bg-white border border-[#EEEEEE] rounded-[12px] p-3 hover:shadow-md transition-shadow">
+<img class="w-20 h-20 rounded-[8px] object-cover flex-shrink-0" data-alt="exterior of a classic luxury hotel in Florence Italy with historical architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1qDYDWrwPaDYyY2UJJ_SqSiDi5GhBw3D2Q_NIn4jfH9yWTxNag3HKRQWIHzhAiZ6kmPaDeHjVMVNywzbcZoJ9WYDxrFoCJDc7lCAjHdpnwTgnMoreNFeEn2VE84Zl5DKkQGspK3kyx4YaGNuw0g0dURBKKE1lEgYIhotG3qNQDOBMsuA3Hgx_Y2WDGojBH5ciPG7fJvqGSQn9GbwcqE6ci88zP5x68ZzV0rBH-QALQJX59ZGfGLPjaWEvoQ9-yQwv-0Kk67Zp5ck" style="">
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-[#1A1F36]" style="">Parmavana Luxury Suites</h3>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">Boutique • Florence, Italy</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-[13px] font-bold text-[#E63027]" style="">$220/Night</span>
+<div class="flex text-[#FFC107] text-[12px]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex items-center gap-4 bg-white border border-[#EEEEEE] rounded-[12px] p-3 hover:shadow-md transition-shadow">
+<img class="w-20 h-20 rounded-[8px] object-cover flex-shrink-0" data-alt="modern waterfront resort with wooden deck overlooking the turquoise sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu_P55ulgThX3oYsj1b-3XItYwh01rBV5roVA0K-4Gavc752vRobt7EUPGP8q7139P6vt6sNXNJEtV5PvquHsOXRqU2F1uFzKVnwYgnLvYKBS70wk42JOVBZwZQN_dmEPooMee99ORs7z9VSgc_IRehluk30ZliR7gQgHHdrsLLVDYggQsetR0dFX854KarhYAo7sw9LrDJFdand9jZ4eB-djYzKBQp8oxHHBPNX7IHF7n45b0GfHNg1qGXmy8eJ3T951ai1ws-bc" style="">
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-[#1A1F36]" style="">Waterfront Retreat</h3>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">Resort • Maldives</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-[13px] font-bold text-[#E63027]" style="">$310/Night</span>
+<div class="flex text-[#FFC107] text-[12px]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex items-center gap-4 bg-white border border-[#EEEEEE] rounded-[12px] p-3 hover:shadow-md transition-shadow">
+<img class="w-20 h-20 rounded-[8px] object-cover flex-shrink-0" data-alt="grandiose palace hotel with golden facade and manicured gardens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYRszpUyGtfkbTazwuJ2IIWmnXXXjuSq8JotsPhfrbwj_L1vB1UhAEF2tQ9KLtMHeRctGqhYRAsc_rovlVJEq2BQiYrhW4gfAGT9HTUneqkROeo_sufwx3jfQb-loqKCazLxhyWJQDJe27idBwG44m27eRVvJEEP0FOkw3WqjGu736q8-KisERkmzzHwWYmqPTE0HfvRj-UndWe10HyC5uf68ZMiK0nv4q85kBaoz7MeQtRvH1royfhD-JtK77vuDYq3BQqKItlZo" style="">
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-[#1A1F36]" style="">Golden Heritage Palace</h3>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">Heritage • Rajasthan, India</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-[13px] font-bold text-[#E63027]" style="">$190/Night</span>
+<div class="flex text-[#FFC107] text-[12px]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="">star_half</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex items-center gap-4 bg-white border border-[#EEEEEE] rounded-[12px] p-3 hover:shadow-md transition-shadow">
+<img class="w-20 h-20 rounded-[8px] object-cover flex-shrink-0" data-alt="contemporary bay hotel with glass balconies overlooking the Sydney Opera House" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtGwS2IWjXGDUITb3XBXsgBrYbwel8fz6XgweJXJho78ZnRx01KFjZyGwdh7ec9LW_32QftDdnw_O_gYPbMuYOC1ZkRkTH20SDFqaEByWzWt7_zGKt50OB7osePG6H10GDft1K2xMTVGEgaVDgELa0cg8FjYeRYY4i68-Vs5qd-lqS1kekIN6p7MC4OzoBtUbBpdjGMbwB6T0YpwVjwaBcqdyOsZp0mKkoDavMettM2oyFNON91fgcflaRajQ2Icq3kQDKn1asrAI" style="">
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-[#1A1F36]" style="">Australian Bay Hotel</h3>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">Luxury • Sydney, Australia</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-[13px] font-bold text-[#E63027]" style="">$400/Night</span>
+<div class="flex text-[#FFC107] text-[12px]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: Dream Destinations (City Grid) -->
+<section class="py-[80px] bg-white">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="mb-10 text-center">
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">Where to Next?</span>
+<h2 class="text-[28px] font-extrabold text-[#1A1F36] mt-1" style="">Dream Destinations.</h2>
+</div>
+<div class="space-y-4">
+<!-- Row 1 -->
+<div class="grid grid-cols-3 gap-4">
+<div class="relative h-[200px] rounded-[12px] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="vibrant street architecture in Kyiv with colorful buildings and cobble streets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhHybypqWqjTXZCVzDLdYcSriSTva1LfCqxjD2lS4H4jRHViMEZmTCjN0lrWGJi2RvOFTbKzWPvsgq5-gVF8cztOZrVHc6gWm7djTxlTU6b2kEQTJ5GdNgaSQ2ooyz9Blw5J7X6Jg7JK4JdeI-miX2z6EMd4sI7oWGklJGyrZPGxh9rqmnKHVOk-_KD6TIRYwhJoBf34mzkoJyKpJQJDp8pbDNs5k0nqwNChyzONnOp7GIexzH4bQu_7Y6k_iaWjRzfI2qBsVC4mk" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-[16px] text-white font-bold" style="">Ukraine</h3>
+<p class="text-[12px] text-white/75" style="">120+ Hotels</p>
+</div>
+</div>
+<div class="relative h-[200px] rounded-[12px] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="majestic Red Square in Moscow with St. Basils Cathedral in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS9fvpvCCsF_fthKvFJVu4LLFa0PpMrzM0mI6yvY69eKFmFDlS3IxOKg-Pmo579EbVMTaZBgdS_BDui5YrJUdsyXR6TW0sN50XpXh4B-oXTl_JNngiaaLErs_3snQNhk_p1RDFF9-bD2ijB88QE4T8EN9OLbiI1Z2zxWrghWXXjG8abIoaj68S2Z2WRKYw1rQVXI25K3DYobYPtjDAL2BxytP_eTGbH12C-msTYvSpRFDrBXD6fdAZ2KZKBbwA64_72ngI0zO-xdg" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-[16px] text-white font-bold" style="">Russia</h3>
+<p class="text-[12px] text-white/75" style="">85+ Hotels</p>
+</div>
+</div>
+<div class="relative h-[200px] rounded-[12px] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="emerald green limestone islands in Phang Nga Bay Thailand at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCum97HffPb_pxru3bqqkSpeZz4qUT79r_JvwVecq7Gg0ConuFW5BHs_s_uj-QeZFuKsRGcH4ZJQW6BZcXYN3dtkJLenPpVh4KLmAzzj1G9Q0zvJgVCbUBu8JMu_60klwcW8FI9KjJ9OflEPGmko2cUevNeXApZ0t3mer2gDokauzBLMTzVvOIQaUjTqPEPpDwyjV9L44wuqpWmWxx4JxWQOYOIJQhcj5j0x_vR7F4QGSpCIoyoE0xbt1PjQzpbLhbDKGtVLIA1voM" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-[16px] text-white font-bold" style="">Thailand</h3>
+<p class="text-[12px] text-white/75" style="">340+ Hotels</p>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-2 gap-4">
+<div class="relative h-[220px] rounded-[12px] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="the ultra-modern Flame Towers of Baku overlooking the Caspian Sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCullpm8fJCJYDV65zQ3qvHP7s23fMGtDxxyksqT075y3GSBql3J4YCToDOegV-AojfoBY9bbsFNOHGt1MjBLuzG-PjwGlDuRgTfmzuue_dJffM6YpKA-4jBVNXvsajJMa6eHBqYtt2bMgjQetM2kACvvZO0ZHWxiNneXt_o0eK5E0nzjvBLBRDTBamE9MjQ8K8LOCLar3jXT5LZF8Ik_nAHrvuSnya5Mb7Hn0Nf3DU6Fpal6NnRvsz9d1-W8vDqv6gLSHykpvFLBY" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-[16px] text-white font-bold" style="">Azerbaijan</h3>
+<p class="text-[12px] text-white/75" style="">56+ Hotels</p>
+</div>
+</div>
+<div class="relative h-[220px] rounded-[12px] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="fairytale Neuschwanstein Castle in Germany surrounded by autumn forests" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn_KTOuLTwBaAe97FqVp9lObSbT_oqYJAJqtrrqVGiGFiIRyxtbgF3EEl3SbZ6u0QNmwE8ZYEmfallQ35EMRQE9HMLw-sZbfqAFB0ljcLsaNKrxnJiOYWr6gfDAkXd1FY0FnKaC_czDVIEDfP1ZUaqxx_fcjBAIjnB5QtROv46pOXmiaA5Taqbwz78HzBctBtDgZPPd8a3PDG0cNHKdqJ3nReSdjOb1z5Er56er5vJhlTXeh0_i2It2ZMyliDV3dDgfoLQxSCu0fM" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-[16px] text-white font-bold" style="">Germany</h3>
+<p class="text-[12px] text-white/75" style="">210+ Hotels</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: Why Choose MARLIN? -->
+<section class="bg-[#F5F5F5] py-[80px]">
+<div class="max-w-[1280px] mx-auto px-10 grid md:grid-cols-2 gap-16 items-center">
+<!-- Left Text Content -->
+<div>
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">Why Choose Us</span>
+<h2 class="text-[28px] font-extrabold text-[#1A1F36] mt-1" style="">Why Choose MARLIN Booking?</h2>
+<p class="text-[14px] text-[#888888] leading-[1.8] max-w-[420px] mt-4" style="">We redefine the booking experience by combining meticulous precision with editorial-grade aesthetics, ensuring every stay is an unforgettable story.</p>
+<div class="space-y-6 mt-8">
+<!-- Feature 1 -->
+<div class="flex gap-4">
+<div class="w-9 h-9 bg-[#E63027] rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-[20px]" style="">verified</span>
+</div>
+<div>
+<h4 class="text-[14px] font-bold text-[#1A1F36]" style="">Exceptional Services</h4>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">Vetted high-end hospitality standards across all stays.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex gap-4">
+<div class="w-9 h-9 bg-[#3b82f6] rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-[20px]" style="">location_on</span>
+</div>
+<div>
+<h4 class="text-[14px] font-bold text-[#1A1F36]" style="">Prime Locations</h4>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">Exclusive access to centrally located luxury properties.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex gap-4">
+<div class="w-9 h-9 bg-[#10b981] rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-[20px]" style="">auto_fix_high</span>
+</div>
+<div>
+<h4 class="text-[14px] font-bold text-[#1A1F36]" style="">Quality Renovations</h4>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">Modern amenities meets timeless architectural charm.</p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="flex gap-4">
+<div class="w-9 h-9 bg-[#8b5cf6] rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-[20px]" style="">headset_mic</span>
+</div>
+<div>
+<h4 class="text-[14px] font-bold text-[#1A1F36]" style="">Personal and Support</h4>
+<p class="text-[12px] text-[#888888] mt-0.5" style="">24/7 dedicated concierge for every voyager.</p>
+</div>
+</div>
+</div>
+<button class="mt-8 px-8 py-3 bg-[#E63027] text-white text-[14px] font-bold rounded-full hover:opacity-90" style="">Read More →</button>
+</div>
+<!-- Right Image Composition -->
+<div class="relative">
+<img class="w-full h-[380px] object-cover rounded-[16px]" data-alt="young woman with backpack standing on mountain edge looking at vast valley during golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-wNNl5qoxtQ7IWeHD5Ys_VL4zPIJ6tO42aniD2-r4spZ6q-w71O8SsAi2TfvWrMrVSKUuv5ms55LVj8m9pQzehBYowZKx3k_mqmlbRc2hk9lsU-SSkcfhJNDT_-DP77dK2S_2prfRuKThRpOm916K8f8laWle7Qfh92VXfMJVLECCXrvNyCKknncGGUCYMEyTWKhkvUywpkFpzPZ86Gc4NbGV7bJ8TLzl7-Hf9LQSRK5oENWR-k85bYf_zRBCvEYY6_x0shISAI" style="">
+<!-- Floating Card -->
+<div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-[12px] shadow-[0_8px_32px_rgba(26,31,54,0.15)] max-w-[180px]">
+<span class="text-[32px] font-extrabold text-[#E63027] leading-none" style="">98%</span>
+<h5 class="text-[13px] font-bold text-[#1A1F36] mt-1" style="">Client Satisfaction</h5>
+<div class="flex items-center gap-1 mt-3">
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="female user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEv85ekd_gx10wEuFO8l23FxifkKLWNmFXkNU_lFe4VwF-LNzvURHXbuvnqjtLOjY0JZm8QIj1sN1mAsE7zwZU1UenwL-PtoHMPYjer0Y4WMrOyLbMpJrSBbSNkKLQE_lZmHPUfQpRnAOlnzcUVBblzB7LqVGPdWeLbfILTVfT4PdUZkPubaR-4wxg5EepxGpnwh9OGNYwQp0W_9fxOix9pxtmDgWkDuFAYHUqWhiVRU4c0F-N8d9NkjW6Jr44t_-HZI6bezfJaRM" style="">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="male user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfwMWssUj7inJ9R8iVcsrlTLP-n__KICOlNiz8xX6wHNV3YtQRm74VGgbeGMK_F8TzKuvyp_ToAtqfVVAy91gosBp6chFSEug31blhPwyW2EG9YG9GjZ6Rptg297rCbm3VFw5QYmlrM5VFoi2px3hR9OJ0ZdkZ86r1IXIDVRYjhi5MliPf81NG8mNBrhfSTLY4AbKShApQA5W0XcZCw06YQfKN0XDvhohEIafZwcF6oNzkJwtDTSoKBrQcqlBn5H_vh2j7see3TWQ" style="">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="female user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMzMxl7s9KGmSjhHn3owl8pLwPWgQG9JpLHX6jmierScHIz3emfGNHCGi6wD6ad2FE7i3bcEkZeCVb2w-t0DU2rgq_pEEJxFPBpcTLTj62PpULniZTJ_wr_1Owl7eozZMm_AnTNijhJeqbK1JC8HhQGpudRV_lcNVwcPFfvfZMI2FQLXhaVht5jFiHH4Nb-ffDnIK2q0ROw0SdaMpidCFLBp6BkhETwttLt7lndihjHaQOcegDEhh824wNLXnbRPq0ZF3lPRhfRhg" style="">
+</div>
+</div>
+<div class="flex text-[#FFC107] text-[12px] mt-2">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: Your Journey in 3 Easy Steps -->
+<section class="py-[80px] bg-white overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-10 text-center">
+<h2 class="text-[28px] font-extrabold text-[#1A1F36]" style="">Your Journey in 3 Easy Steps.</h2>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 mt-12 relative">
+<!-- Step 1 -->
+<div class="flex-1 bg-white border border-[#EEEEEE] rounded-[12px] p-8 text-center relative z-10">
+<span class="text-[11px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">STEP 1</span>
+<div class="mt-4 flex justify-center">
+<span class="material-symbols-outlined text-[#E63027] text-[48px]" style="">search</span>
+</div>
+<h3 class="text-[16px] font-extrabold text-[#1A1F36] mt-4" style="">Discover Hotels</h3>
+<p class="text-[13px] text-[#888888] leading-[1.7] mt-3 max-w-[220px] mx-auto" style="">Browse through our curated collection of premium hotels.</p>
+</div>
+<!-- Connector Line 1 -->
+<div class="hidden md:block absolute top-1/2 left-[30%] right-[60%] border-t-2 border-dashed border-[#DDDDDD] -translate-y-[24px]"></div>
+<!-- Step 2 -->
+<div class="flex-1 bg-white border border-[#EEEEEE] rounded-[12px] p-8 text-center relative z-10">
+<span class="text-[11px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">STEP 2</span>
+<div class="mt-4 flex justify-center">
+<span class="material-symbols-outlined text-[#E63027] text-[48px]" style="">check_circle</span>
+</div>
+<h3 class="text-[16px] font-extrabold text-[#1A1F36] mt-4" style="">Confirmation</h3>
+<p class="text-[13px] text-[#888888] leading-[1.7] mt-3 max-w-[220px] mx-auto" style="">Get instant confirmation and digital key access.</p>
+</div>
+<!-- Connector Line 2 -->
+<div class="hidden md:block absolute top-1/2 left-[65%] right-[25%] border-t-2 border-dashed border-[#DDDDDD] -translate-y-[24px]"></div>
+<!-- Step 3 -->
+<div class="flex-1 bg-white border border-[#EEEEEE] rounded-[12px] p-8 text-center relative z-10">
+<span class="text-[11px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">STEP 3</span>
+<div class="mt-4 flex justify-center">
+<span class="material-symbols-outlined text-[#E63027] text-[48px]" style="">sentiment_very_satisfied</span>
+</div>
+<h3 class="text-[16px] font-extrabold text-[#1A1F36] mt-4" style="">Enjoy</h3>
+<p class="text-[13px] text-[#888888] leading-[1.7] mt-3 max-w-[220px] mx-auto" style="">Arrive and immerse yourself in the Marlin experience.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 11: Testimonials -->
+<section class="bg-[#F5F5F5] py-[80px]">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="text-center mb-12">
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">Testimonials</span>
+<h2 class="text-[28px] font-extrabold text-[#1A1F36] mt-1" style="">What Our Voyagers Say.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonial 1 -->
+<div class="bg-white rounded-[12px] shadow-[0_4px_20px_rgba(26,31,54,0.07)] p-6">
+<h4 class="text-[14px] font-bold text-[#1A1F36]" style="">Hospitality Renewed!</h4>
+<p class="text-[13px] text-[#888888] leading-[1.8] mt-3" style="">"Marlin Booking changed how I view travel. The editorial selection of hotels meant I didn't have to sift through mediocre options. Every recommendation was spot on, and the check-in process was the smoothest I've ever experienced in years of business travel."</p>
+<div class="h-[1px] bg-[#EEEEEE] my-4"></div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="professional man smiling avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApd0pWhpDlSDcUqhhEkTSLcXdSfnu8hhwOYXmVihXaSLWR6Lg8u8g2KoTVOOQuyDkzEq1LS8iyQVCQuUhbpEb-TVOEhhqEXntF9Evq3cNARV-zvwzlFfHpBXyJY3YJ0kafv6mNxb4jHnB_Qf5wxBO-upjZ0AgvkfXDIBbA-REmkOwerScCFRQHIRxBKjAmpwjWRTWDO6-NRfu2-QXMfbANXwtsRBEtzSSThn3HSItuOFKj2_DhPmtd6NidOAw6hA153YoH1n5tTK8" style="">
+<div>
+<p class="text-[13px] font-bold text-[#1A1F36]" style="">Marcus Thorne</p>
+<p class="text-[11px] text-[#888888]" style="">Business Traveller</p>
+</div>
+</div>
+<div class="flex text-[#FFC107] text-[13px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white rounded-[12px] shadow-[0_4px_20px_rgba(26,31,54,0.07)] p-6">
+<h4 class="text-[14px] font-bold text-[#1A1F36]" style="">The Best Discovery!</h4>
+<p class="text-[13px] text-[#888888] leading-[1.8] mt-3" style="">"I found a hidden gem in Florence that I would have never seen on other platforms. The focus on high-end design and central locations is exactly what I look for. The 24/7 support team even helped me book a private vineyard tour last minute."</p>
+<div class="h-[1px] bg-[#EEEEEE] my-4"></div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="elegant woman smiling avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh5mmcSRTXfSb9Kmb6GUyrdP2CXUkB55IsYupq0LYFHgetyYSZXi-mRqiNB0mPJ-fZspIiLVeYJlAqn302_CjxnMnNL0lnD8LpQtejQIbUxG4IcVc1TvObQFQfwyAf_lhCqpMetZel8oAo3goRgHcYuUoIxeMLTEyH_sZAmmPGx4dkwZonA1V3NB3kqfVPmY9NK_0mV4w3kpf1knZRsXZTizPIBwdlvPW2I_3SO8fqFVm3BCbnncodJWROIHygnzkd_ht_NlUl20c" style="">
+<div>
+<p class="text-[13px] font-bold text-[#1A1F36]" style="">Elena Rossi</p>
+<p class="text-[11px] text-[#888888]" style="">Lifestyle Influencer</p>
+</div>
+</div>
+<div class="flex text-[#FFC107] text-[13px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white rounded-[12px] shadow-[0_4px_20px_rgba(26,31,54,0.07)] p-6">
+<h4 class="text-[14px] font-bold text-[#1A1F36]" style="">Hidden Gem Found!</h4>
+<p class="text-[13px] text-[#888888] leading-[1.8] mt-3" style="">"Searching for family-friendly luxury is usually a nightmare of trade-offs. Marlin Booking curated a suite that was both sophisticated for us and perfect for our two kids. The attention to detail in their property descriptions is unparalleled."</p>
+<div class="h-[1px] bg-[#EEEEEE] my-4"></div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="man with beard smiling avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo1RSPQE8jOA_W4O7oSqIQIa6cZbF2ptNtGbULEXw6VjezFJqJpgJu_8FCPhfio32qTI1cr0eH5o2y03-txTmrocPW-w4zxFbUqewvwXJBNNEo9IXxtpS0j_Pu6VrymN426aNufoXibH8U2359uny-x3_4866PAGwdMokkNAjuYFBEkiFe4G4ovO0Ju1RZef2W8eYx7gpNIb4nroTqj_8zI8bIL8zobZSYokUFXM8FYpgZNmLa_KsZ4EP-EdPNsznO7Uf-MF4wex0" style="">
+<div>
+<p class="text-[13px] font-bold text-[#1A1F36]" style="">David Chen</p>
+<p class="text-[11px] text-[#888888]" style="">Architect</p>
+</div>
+</div>
+<div class="flex text-[#FFC107] text-[13px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 12: FAQ -->
+<section class="bg-[#FFF5F5] py-[80px]">
+<div class="max-w-[1280px] mx-auto px-10 flex flex-col md:flex-row gap-16">
+<!-- Left: Image Collage -->
+<div class="w-full md:w-[45%]">
+<div class="relative">
+<img class="w-full h-[300px] object-cover rounded-[12px]" data-alt="luxury hotel interior with plush furniture and warm golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALw19IVvbmrt9Uesx3sdKMj_jwwP4jgrh9S8ysSWKSETiFceg84maOOWw6lQbobKkz0pB20fMTszmm9dP3hKcsJ2a56XGm18DNIWrXKOjIvQlAVjIK0ELOnXhbZ9LE5m1aR45SuSDbKNcseZftRd8Aaj98KZ9oHBOQZ0c0n7BeWiuU0egYBPWTTHF3xXGN8ozInPku94aP6IojAhfBHQkis918JqmmZ7ULwNN7ekB4mQ2YWUJP9svcqCwOzQp2OekBj6OxR6sNLBI" style="">
+<img class="w-[70%] h-[180px] object-cover rounded-[12px] -mt-10 ml-auto relative z-10 shadow-[0_8px_24px_rgba(26,31,54,0.15)]" data-alt="minimalist hotel lobby with clean lines and premium materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKrBs6OcHiUEwS91J1nJyuGR10RHT-ffg1lk4jwMvjJ36EHx4FGL3x_8EHAf8XnIoXNZ-xaDRmIuFdc34C8hN8RIeXiDMYs7k4Zych4-WrgHJEF8zOgd8grzp8hPJt7uG2b8mNroN-Dnqwhr733XQWS_v3Id2r8vmMB6JvBn7qNLLsBOvFc8blHzc9jCoF8yjf4xMg5KVilDB8qWLhTOf0Br5hFTX2ltNmseWUYM69T9qe4sHZRufdYlFpu2Yb6BsB13fguh0p08o" style="">
+</div>
+</div>
+<!-- Right: FAQ Content -->
+<div class="w-full md:w-[55%]">
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">FAQs</span>
+<h2 class="text-[24px] font-extrabold text-[#1A1F36] mt-1 mb-6" style="">Frequently Asked Questions.</h2>
+<div class="space-y-0">
+<!-- Item 1 (Expanded) -->
+<div class="bg-[#FFF0EF] rounded-[8px] p-4 mb-4">
+<div class="flex justify-between items-center cursor-pointer">
+<h4 class="text-[14px] font-bold text-[#E63027]" style="">How do I change or cancel a booking?</h4>
+<span class="material-symbols-outlined text-[#E63027]" style="">expand_more</span>
+</div>
+<p class="text-[13px] text-[#888888] leading-[1.7] mt-2" style="">You can easily manage your stays through your Marlin dashboard. Cancellations are free up to 24 hours before check-in for most premium listings.</p>
+</div>
+<!-- Item 2 -->
+<div class="border-b border-[#EEEEEE] py-4 flex justify-between items-center cursor-pointer group">
+<h4 class="text-[14px] font-medium text-[#1A1F36] group-hover:text-[#E63027] transition-colors" style="">What are the check-in and check-out times?</h4>
+<span class="material-symbols-outlined text-[#888888] text-[20px]" style="">chevron_right</span>
+</div>
+<!-- Item 3 -->
+<div class="border-b border-[#EEEEEE] py-4 flex justify-between items-center cursor-pointer group">
+<h4 class="text-[14px] font-medium text-[#1A1F36] group-hover:text-[#E63027] transition-colors" style="">Is breakfast included in my stay?</h4>
+<span class="material-symbols-outlined text-[#888888] text-[20px]" style="">chevron_right</span>
+</div>
+<!-- Item 4 -->
+<div class="border-b border-[#EEEEEE] py-4 flex justify-between items-center cursor-pointer group">
+<h4 class="text-[14px] font-medium text-[#1A1F36] group-hover:text-[#E63027] transition-colors" style="">Can I request an early check-in?</h4>
+<span class="material-symbols-outlined text-[#888888] text-[20px]" style="">chevron_right</span>
+</div>
+<!-- Item 5 -->
+<div class="py-4 flex justify-between items-center cursor-pointer group">
+<h4 class="text-[14px] font-medium text-[#1A1F36] group-hover:text-[#E63027] transition-colors" style="">Do you offer airport transfer services?</h4>
+<span class="material-symbols-outlined text-[#888888] text-[20px]" style="">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 13: Blog / Travel Insights -->
+<section class="py-[80px] bg-white">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="flex justify-between items-end mb-10">
+<div>
+<span class="text-[12px] font-bold text-[#E63027] uppercase tracking-[0.08em]" style="">Blog Posts</span>
+<h2 class="text-[28px] font-extrabold text-[#1A1F36] mt-1" style="">Travel Insights.</h2>
+</div>
+<button class="px-6 py-2 border-[1.5px] border-[#1A1F36] text-[#1A1F36] rounded-full text-[13px] font-bold hover:bg-[#1A1F36] hover:text-white transition-all" style="">All Articles</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Blog Card 1 -->
+<div class="bg-white rounded-[12px] border border-[#EEEEEE] overflow-hidden group">
+<div class="relative h-[200px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="tropical overwater bungalow in the Maldives with clear turquoise water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNpDg_KGioc2eJ0cF-PjfGGZS0zLsSKdzlF6rAyobVnT-0CCcAIXd7X0Qz4_y42xHNbLJMzwk2u95nLLWvMMGD12a72EfqWB1ShuHzLOVZmpWerfrSRbqyQl-FjidSlbayOZAEYyeO_TxDA9wcFgzz_LmmqEOS0ZEla27m32iVXgg9xDnWlsY_R2Tb-A3ZhZowZ0io1uRVTy0DlcH26gYxjwzSXLyESsdhUQh4aCHgUtJSfmAVDkbe8vpax0HSjnipFOWzCTEPmK8" style="">
+<span class="absolute top-4 left-4 bg-[#E63027] text-white text-[11px] font-bold px-3 py-1 rounded-full" style="">Top Picks</span>
+</div>
+<div class="p-4">
+<h3 class="text-[15px] font-bold text-[#1A1F36] leading-tight line-clamp-2" style="">Top 10 Hidden Gems in the Maldives for 2025</h3>
+<div class="h-[1px] bg-[#EEEEEE] my-4"></div>
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="author headshot Sarah Jenkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ncavu9YL_wwrYxXjjIOGmMGm2MpZRCJs2InMpZYZagmYX-te-Q09RnAc3E7M7WMQXviNgM8iaBpHBbC7xAfKhJh07pARiF6iznfW407mVFp2s0ZtsBRpWGzdSgjxexspowaodQkm82c4Q8xmNzCDZ7he8YnwFSRF0S1UPFyVMVT_RSM4aE_jW-n8NbwjfomU79LAZggTqKrHCinA-uX5jEFXNBTAEAXIbUle86ZcCIZ7aoWTGi9duZC2mRNNq-s38qi6XkAm0Ys" style="">
+<span class="text-[12px] font-bold text-[#1A1F36]" style="">Sarah Jenkins</span>
+<span class="text-[12px] text-[#888888]" style="">· Oct 15, 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-[12px] border border-[#EEEEEE] overflow-hidden group">
+<div class="relative h-[200px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="luxury airport lounge with comfortable chairs and view of planes taking off" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUjf0ouVRfPaRKAA57AuR6QJqjsm_Il4-2iuuI7d_3Fute-NKqqCA8kNeA2etZT4GKImEV88IVClNuw0iKKf7v2cu5TE051Y08Wf2UDYnOqp3X5NI8VbwOp-HUWDioAvgewjSRWQRdHK1gnPa3edWd1HEUDPywnWOK0izjvpi6Sl1Q72p7uiDAC1P8C1bY2kpIgMTI92sOHSpJux_Ek3Nw1_9FipZ1CXwSGk05FNxS3koREB0l_yP8_b0vblnXL-XQhomsWdMV0-w" style="">
+<span class="absolute top-4 left-4 bg-[#E63027] text-white text-[11px] font-bold px-3 py-1 rounded-full" style="">Money Saving</span>
+</div>
+<div class="p-4">
+<h3 class="text-[15px] font-bold text-[#1A1F36] leading-tight line-clamp-2" style="">The Ultimate Guide to Airport Lounge Access</h3>
+<div class="h-[1px] bg-[#EEEEEE] my-4"></div>
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="author headshot James Wilson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCYYRHui9GeiICQdO-2x97ZEkjwlsquIkZfL2trdwoCf99bEKe8ZUgo0GmxQWg5pBLBBU2yUf-nQE9nNZ0sjInRyiwpIOzkz-kuGcV4XSNbimOuHbErHHfVOq4umycRq4GNM7e6GlYdTdLgkRTotV06R3Z3xuF84x5OHQgjeO-QirEBZKJIz3i8So5y_E-hD__AuYVVIkl4Tnqk17NaHw6DrIpw8yiWsVhMIj4FvxSYN6XItjoltI8Sy3QZUOT5P-46dKylG1EOeE" style="">
+<span class="text-[12px] font-bold text-[#1A1F36]" style="">James Wilson</span>
+<span class="text-[12px] text-[#888888]" style="">· Oct 12, 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-[12px] border border-[#EEEEEE] overflow-hidden group">
+<div class="relative h-[200px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="hiker overlooking a scenic valley in the Swiss Alps under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHiGMbaK6lUzpZD1JBUfrf9CZlt_ppp9sLKhHCy6v_x8NC9t0wF5gwKNePaZjku8gFNJk-LqULxM2rSgkjHHPxrwg2RAXB5SOu9D3j6gwN_ODGHRG_97ZdguV3lJORaK7fHesJL_dRkUhY2vgSHKaZNSKdSM52N6RY9PRWt6j_6_kIzC-bcNn68YpB8zr9MpIwKqCJTZeEt3qASWMDHNl-uGDAfRUqF6HOfJiYmQn-zMjgwulXrvyG5h7rYrtiqPcjhySooXvySto" style="">
+<span class="absolute top-4 left-4 bg-[#E63027] text-white text-[11px] font-bold px-3 py-1 rounded-full" style="">Destinations</span>
+</div>
+<div class="p-4">
+<h3 class="text-[15px] font-bold text-[#1A1F36] leading-tight line-clamp-2" style="">Sustainable Hiking in the Swiss Alps</h3>
+<div class="h-[1px] bg-[#EEEEEE] my-4"></div>
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="author headshot Mila Kunis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqQVPGStSQD_JmsYn4D77jnI3rii1pg48DH3PRsgcqHjJ9jnFVex2wbpNkmzEyYgGnk3EgqK5xVkR0Pha5k5aP42rUBjg7fM6cHq-34L1utVTdLD00_5Ylw8kLSk5tAkRMHOkanpC8rbo9gZ3tVPmull3jTB1x76xeA-O2pW1BDHtY8CoVKNQU-vrsl3IwZ2jiC1MePthTbeH97Jc1QUREXl_mlEniqt6ra-wB964-CE897rCj7NFUVXlFG4gyJj5owQwPNlR7Yu4" style="">
+<span class="text-[12px] font-bold text-[#1A1F36]" style="">Mila Kunis</span>
+<span class="text-[12px] text-[#888888]" style="">· Oct 08, 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 14: Newsletter -->
+<section class="w-full bg-[#E63027] py-[60px] relative overflow-hidden">
+<div class="absolute inset-0 opacity-[0.05]" style="background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 1px, transparent 10px);"></div>
+<div class="max-w-[1280px] mx-auto px-10 text-center relative z-10">
+<h2 class="text-white text-[30px] font-extrabold" style="">Subscribe to our Newsletter</h2>
+<p class="text-white/80 text-[13px] mt-2 mb-8" style="">Get the latest editorial travel guides and exclusive booking offers delivered to your inbox.</p>
+<form class="max-w-[480px] mx-auto flex">
+<input class="flex-1 h-[50px] bg-white border-none rounded-l-full px-6 text-[14px] text-[#1A1F36] placeholder:text-[#888888] focus:ring-0" placeholder="Enter your email address" type="email">
+<button class="h-[50px] bg-[#1A1F36] text-white font-bold px-8 rounded-r-full hover:opacity-90 transition-opacity" type="submit" style="">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- SECTION 15: Footer -->
+<footer class="bg-[#1A1F36] pt-16 pb-8 text-white/60">
+<div class="max-w-[1280px] mx-auto px-10">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+<!-- Branding -->
+<div class="md:col-span-2">
+<div class="flex items-baseline gap-0.5 mb-4">
+<span class="text-lg font-bold uppercase text-white tracking-tighter" style="">MARLIN</span>
+<div class="w-1 h-1 bg-[#E63027] rounded-full"></div>
+</div>
+<p class="text-[13px] leading-[1.8] max-w-[300px]" style="">Marlin Booking is your curated gateway to the world's most exceptional stays. We believe travel should be precise, personal, and perfectly designed.</p>
+</div>
+<!-- Links 1 -->
+<div>
+<h4 class="text-[14px] font-bold text-white mb-6" style="">Quick Links</h4>
+<ul class="space-y-4 text-[13px]">
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Solutions</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">About Us</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Services</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Booking</a></li>
+</ul>
+</div>
+<!-- Links 2 -->
+<div>
+<h4 class="text-[14px] font-bold text-white mb-6" style="">Support</h4>
+<ul class="space-y-4 text-[13px]">
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Help Center</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Safety Information</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Cancellation Options</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Our COVID-19 Response</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-[14px] font-bold text-white mb-6" style="">Connect</h4>
+<ul class="space-y-4 text-[13px]">
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-[16px] text-[#E63027]" style="">mail</span> info@marlinbooking.com</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-[16px] text-[#E63027]" style="">call</span> +23 (456) 7890</li>
+<li class="flex gap-4 mt-6" style="">
+<span class="material-symbols-outlined hover:text-white cursor-pointer" style="">social_leaderboard</span>
+<span class="material-symbols-outlined hover:text-white cursor-pointer" style="">movie</span>
+<span class="material-symbols-outlined hover:text-white cursor-pointer" style="">photo_camera</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[12px]" style="">©2025 Marlin Booking. All rights reserved.</p>
+<div class="flex gap-6 text-[12px]">
+<a class="hover:text-white" href="#" style="">Legal Notice</a>
+<a class="hover:text-white" href="#" style="">Privacy</a>
+<a class="hover:text-white" href="#" style="">Terms and Conditions</a>
+<a class="hover:text-white" href="#" style="">Refund Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
